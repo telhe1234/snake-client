@@ -13,8 +13,11 @@ const connect = function () {
     console.log(data);
   });
   conn.on('connect', () => {
+    conn.write("Name: TAE");
+    // setInterval(() => {
+    //   conn.write('Move: up');
+    // }, 1000)
     console.log('Successfully connected to game server!');
-    conn.write("Name: TE");
   });
 
   return conn;
